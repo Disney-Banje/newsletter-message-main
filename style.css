@@ -1,0 +1,161 @@
+*::before,
+*::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input,
+label,
+button {
+    display: block;
+}
+
+input {
+    border: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* colors Start */
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --Dark-slate-grey: hsl(234, 29%, 20%);
+    --Charcoal-grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+/* colors End */
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto-Regular';
+    line-height: 1.25;
+    color: var(--Dark-slate-grey);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.newsletter-wrapper {
+    max-width: 75.5rem;
+}
+
+.desktop {
+    display: none;
+}
+
+.wrapper-description {
+    margin: 2.5rem 2.0rem;
+}
+
+.title {
+    font-size: 2.7rem;
+    font-family: 'Roboto-bold';
+    margin-bottom: 1.8rem;
+}
+
+.success-icon {
+    width: 1.8rem;
+    aspect-ratio: 1 / 1;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.8rem 0;
+}
+
+li {
+    display: flex;
+    align-items: start;
+    gap: 1.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'Roboto-bold';
+    margin-bottom: 0.9rem;
+}
+
+input[type='email'] {
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--Grey);
+}
+
+button {
+    background-color: var(--Dark-slate-grey);
+    color: var(--White);
+    font-family: 'Roboto-bold';
+    padding: 1.5rem 2.5rem;
+    margin-top: 2.0rem;
+    border-radius: 0.8rem;
+}
+
+/* Window responsivness */
+@media screen and (min-width: 768px) {
+
+    body {
+        background-color: var(--Dark-slate-grey);
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .newsletter-wrapper {
+        background-color: var(--White);
+        border-radius: 1.5rem;
+        padding: 1.2rem 1.2rem 1.2rem 2.0rem;
+        display: flex;
+        gap: 2.5rem;
+        flex-direction: row-reverse;
+    }
+
+    .wrapper-description {
+        align-self: center;
+    }
+
+    .title {
+        font-size: 4.5rem;
+    }
+}
